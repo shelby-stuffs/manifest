@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
   <remote  name="aosp" fetch=".." review="https://android-review.googlesource.com/" />
+  <remote  name="blobs" fetch="https://github.com/shelby-stuffs" revision="DVG8" />
+  <remote  name="misc" fetch="https://android.googlesource.com/" revision="android-msm-sunfish-4.14-android13-qpr3" />
+  <remote  name="clang" fetch="https://android.googlesource.com/" revision="android-msm-redbull-4.19-u-preview-2" />
+
   <default revision="master-kernel-build-2021" remote="aosp" sync-j="4" />
-
   <superproject name="kernel/superproject" remote="aosp" revision="common-android-4.14-stable" />
-
   <project path="build" name="kernel/build" />
-  <project path="common" name="kernel/common" revision="android-4.14-stable" />
+  <project path="common" name="android_kernel_samsung_a31" remote="blobs" />
   <project path="kernel/tests" name="kernel/tests" />
   <project path="kernel/configs" name="kernel/configs" />
   <project path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" clone-depth="1" />
   <project path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" name="platform/prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" clone-depth="1" />
-  <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" />
+  <project path="prebuilts-master/clang/host/linux-x86" name="platform/prebuilts/clang/host/linux-x86" clone-depth="1" remote="clang" />
   <project path="prebuilts/build-tools" name="platform/prebuilts/build-tools" clone-depth="1" />
   <project path="prebuilts/kernel-build-tools" name="kernel/prebuilts/build-tools" clone-depth="1" />
+  <project path="prebuilts-master/misc" name="platform/prebuilts/misc" remote="misc" groups="partner" clone-depth="1" />
 </manifest>
