@@ -1,9 +1,9 @@
-# Kernel for Galaxy A31 #
+# Kernel for Galaxy A31/A41 #
 
 ## Setting up your machine ##
 
 You must be running a 64-bit Linux distribution and must have installed some packages to build
-Paranoid Android. Google recommends using [Ubuntu](http://www.ubuntu.com/download/desktop) for
+Kernel for Galaxy A31/A41. Google recommends using [Ubuntu](http://www.ubuntu.com/download/desktop) for
 this and provides instructions for setting up the system (with Ubuntu-specific commands) on
 [the Android Open Source Project website](https://source.android.com/source/initializing.html#setting-up-a-linux-build-environment).
 
